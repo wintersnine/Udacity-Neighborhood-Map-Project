@@ -5,14 +5,14 @@ This is the fifth project made for the Udacity Full Stack Nanodegree program. Th
 
 ## Skills Used:
 
-JavaScript
-jQuery
-HTML
-CSS
-Bootstrap
-KnockoutJS
-Google Maps API
-Wikipedia API
+- JavaScript
+- jQuery
+- HTML
+- CSS
+- Bootstrap
+- KnockoutJS
+- Google Maps API
+- Wikipedia API
 
 ## Getting Started
 
