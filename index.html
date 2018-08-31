@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale= 1.0">
+  <title>Neighborhood Map Project</title>
+  <!-- Bootstrap 4 Alpha CSS(CDN) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <!--Personal CSS-->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <a href class="navbar" data-target="#sidebar"></a>
+    <!-- Map -->
+    <div id="map">
+      <p class="map_error"></p>
+    </div>
+    <!--Sidebar-->
+    <nav id="sidebar">
+      <h4 class="app_title text-white">Neighborhood Map</h4>
+      <!-- Search -->
+      <input class="search" data-bind="textInput: locationSearch, valueUpdate: 'afterkeydown'" placeholder="Your location">
+      <hr class="sidebar_hr">
+      <!--Knockout location List-->
+      <ul class="nav flex-column" data-bind="foreach: mapFilter">
+        <a href="#">
+          <li class="nav-item text-white location_list" data-bind="text: title, click: $parent.fillAndBounceMarker"></li>
+        </a>
+      </ul>
+    </nav>
+  </div>
+
+  <!--References list-->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+  <script src="js/knockout-3.4.2.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/handler.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyCfc1g--dg5RMcMo81VQ30ZrolQHFlm_P8&callback=initMap" onerror="googleError()"></script>
+</body>
+
+</html>
